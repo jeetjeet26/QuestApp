@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8FCEF202A4507BB005797A7 /* QuestappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF1F2A4507BB005797A7 /* QuestappApp.swift */; };
+		C8FCEF222A4507BB005797A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF212A4507BB005797A7 /* ContentView.swift */; };
+		C8FCEF242A4507BD005797A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8FCEF232A4507BD005797A7 /* Assets.xcassets */; };
+		C8FCEF272A4507BD005797A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8FCEF262A4507BD005797A7 /* Preview Assets.xcassets */; };
+		C8FCEF312A4507BD005797A7 /* QuestappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF302A4507BD005797A7 /* QuestappTests.swift */; };
+		C8FCEF3B2A4507BD005797A7 /* QuestappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF3A2A4507BD005797A7 /* QuestappUITests.swift */; };
+		C8FCEF3D2A4507BD005797A7 /* QuestappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF3C2A4507BD005797A7 /* QuestappUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C8FCEF2D2A4507BD005797A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8FCEF142A4507BB005797A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8FCEF1B2A4507BB005797A7;
+			remoteInfo = Questapp;
+		};
+		C8FCEF372A4507BD005797A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8FCEF142A4507BB005797A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8FCEF1B2A4507BB005797A7;
+			remoteInfo = Questapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C8FCEF1C2A4507BB005797A7 /* Questapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Questapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8FCEF1F2A4507BB005797A7 /* QuestappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestappApp.swift; sourceTree = "<group>"; };
+		C8FCEF212A4507BB005797A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C8FCEF232A4507BD005797A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8FCEF262A4507BD005797A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C8FCEF2C2A4507BD005797A7 /* QuestappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8FCEF302A4507BD005797A7 /* QuestappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestappTests.swift; sourceTree = "<group>"; };
+		C8FCEF362A4507BD005797A7 /* QuestappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8FCEF3A2A4507BD005797A7 /* QuestappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestappUITests.swift; sourceTree = "<group>"; };
+		C8FCEF3C2A4507BD005797A7 /* QuestappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8FCEF192A4507BB005797A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8FCEF292A4507BD005797A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8FCEF332A4507BD005797A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8FCEF132A4507BB005797A7 = {
+			isa = PBXGroup;
+			children = (
+				C8FCEF1E2A4507BB005797A7 /* Questapp */,
+				C8FCEF2F2A4507BD005797A7 /* QuestappTests */,
+				C8FCEF392A4507BD005797A7 /* QuestappUITests */,
+				C8FCEF1D2A4507BB005797A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8FCEF1D2A4507BB005797A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8FCEF1C2A4507BB005797A7 /* Questapp.app */,
+				C8FCEF2C2A4507BD005797A7 /* QuestappTests.xctest */,
+				C8FCEF362A4507BD005797A7 /* QuestappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8FCEF1E2A4507BB005797A7 /* Questapp */ = {
+			isa = PBXGroup;
+			children = (
+				C8FCEF1F2A4507BB005797A7 /* QuestappApp.swift */,
+				C8FCEF212A4507BB005797A7 /* ContentView.swift */,
+				C8FCEF232A4507BD005797A7 /* Assets.xcassets */,
+				C8FCEF252A4507BD005797A7 /* Preview Content */,
+			);
+			path = Questapp;
+			sourceTree = "<group>";
+		};
+		C8FCEF252A4507BD005797A7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C8FCEF262A4507BD005797A7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C8FCEF2F2A4507BD005797A7 /* QuestappTests */ = {
+			isa = PBXGroup;
+			children = (
+				C8FCEF302A4507BD005797A7 /* QuestappTests.swift */,
+			);
+			path = QuestappTests;
+			sourceTree = "<group>";
+		};
+		C8FCEF392A4507BD005797A7 /* QuestappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C8FCEF3A2A4507BD005797A7 /* QuestappUITests.swift */,
+				C8FCEF3C2A4507BD005797A7 /* QuestappUITestsLaunchTests.swift */,
+			);
+			path = QuestappUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8FCEF1B2A4507BB005797A7 /* Questapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8FCEF402A4507BD005797A7 /* Build configuration list for PBXNativeTarget "Questapp" */;
+			buildPhases = (
+				C8FCEF182A4507BB005797A7 /* Sources */,
+				C8FCEF192A4507BB005797A7 /* Frameworks */,
+				C8FCEF1A2A4507BB005797A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Questapp;
+			productName = Questapp;
+			productReference = C8FCEF1C2A4507BB005797A7 /* Questapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C8FCEF2B2A4507BD005797A7 /* QuestappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8FCEF432A4507BD005797A7 /* Build configuration list for PBXNativeTarget "QuestappTests" */;
+			buildPhases = (
+				C8FCEF282A4507BD005797A7 /* Sources */,
+				C8FCEF292A4507BD005797A7 /* Frameworks */,
+				C8FCEF2A2A4507BD005797A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8FCEF2E2A4507BD005797A7 /* PBXTargetDependency */,
+			);
+			name = QuestappTests;
+			productName = QuestappTests;
+			productReference = C8FCEF2C2A4507BD005797A7 /* QuestappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C8FCEF352A4507BD005797A7 /* QuestappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8FCEF462A4507BD005797A7 /* Build configuration list for PBXNativeTarget "QuestappUITests" */;
+			buildPhases = (
+				C8FCEF322A4507BD005797A7 /* Sources */,
+				C8FCEF332A4507BD005797A7 /* Frameworks */,
+				C8FCEF342A4507BD005797A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C8FCEF382A4507BD005797A7 /* PBXTargetDependency */,
+			);
+			name = QuestappUITests;
+			productName = QuestappUITests;
+			productReference = C8FCEF362A4507BD005797A7 /* QuestappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8FCEF142A4507BB005797A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C8FCEF1B2A4507BB005797A7 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					C8FCEF2B2A4507BD005797A7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C8FCEF1B2A4507BB005797A7;
+					};
+					C8FCEF352A4507BD005797A7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = C8FCEF1B2A4507BB005797A7;
+					};
+				};
+			};
+			buildConfigurationList = C8FCEF172A4507BB005797A7 /* Build configuration list for PBXProject "Questapp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8FCEF132A4507BB005797A7;
+			productRefGroup = C8FCEF1D2A4507BB005797A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8FCEF1B2A4507BB005797A7 /* Questapp */,
+				C8FCEF2B2A4507BD005797A7 /* QuestappTests */,
+				C8FCEF352A4507BD005797A7 /* QuestappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8FCEF1A2A4507BB005797A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8FCEF272A4507BD005797A7 /* Preview Assets.xcassets in Resources */,
+				C8FCEF242A4507BD005797A7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8FCEF2A2A4507BD005797A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8FCEF342A4507BD005797A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8FCEF182A4507BB005797A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8FCEF222A4507BB005797A7 /* ContentView.swift in Sources */,
+				C8FCEF202A4507BB005797A7 /* QuestappApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8FCEF282A4507BD005797A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8FCEF312A4507BD005797A7 /* QuestappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C8FCEF322A4507BD005797A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8FCEF3D2A4507BD005797A7 /* QuestappUITestsLaunchTests.swift in Sources */,
+				C8FCEF3B2A4507BD005797A7 /* QuestappUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8FCEF2E2A4507BD005797A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8FCEF1B2A4507BB005797A7 /* Questapp */;
+			targetProxy = C8FCEF2D2A4507BD005797A7 /* PBXContainerItemProxy */;
+		};
+		C8FCEF382A4507BD005797A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C8FCEF1B2A4507BB005797A7 /* Questapp */;
+			targetProxy = C8FCEF372A4507BD005797A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C8FCEF3E2A4507BD005797A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C8FCEF3F2A4507BD005797A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8FCEF412A4507BD005797A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Questapp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qst.Questapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8FCEF422A4507BD005797A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Questapp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qst.Questapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C8FCEF442A4507BD005797A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qst.QuestappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Questapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Questapp";
+			};
+			name = Debug;
+		};
+		C8FCEF452A4507BD005797A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qst.QuestappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Questapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Questapp";
+			};
+			name = Release;
+		};
+		C8FCEF472A4507BD005797A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qst.QuestappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Questapp;
+			};
+			name = Debug;
+		};
+		C8FCEF482A4507BD005797A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = qst.QuestappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Questapp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8FCEF172A4507BB005797A7 /* Build configuration list for PBXProject "Questapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8FCEF3E2A4507BD005797A7 /* Debug */,
+				C8FCEF3F2A4507BD005797A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8FCEF402A4507BD005797A7 /* Build configuration list for PBXNativeTarget "Questapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8FCEF412A4507BD005797A7 /* Debug */,
+				C8FCEF422A4507BD005797A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8FCEF432A4507BD005797A7 /* Build configuration list for PBXNativeTarget "QuestappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8FCEF442A4507BD005797A7 /* Debug */,
+				C8FCEF452A4507BD005797A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8FCEF462A4507BD005797A7 /* Build configuration list for PBXNativeTarget "QuestappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8FCEF472A4507BD005797A7 /* Debug */,
+				C8FCEF482A4507BD005797A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8FCEF142A4507BB005797A7 /* Project object */;
+}
