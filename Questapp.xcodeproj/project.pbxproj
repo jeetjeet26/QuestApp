@@ -15,9 +15,6 @@
 		C8B996E12A4645300099E1B4 /* UserQuestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996E02A4645300099E1B4 /* UserQuestData.swift */; };
 		C8B996E22A4645300099E1B4 /* UserQuestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996E02A4645300099E1B4 /* UserQuestData.swift */; };
 		C8B996E32A4645300099E1B4 /* UserQuestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996E02A4645300099E1B4 /* UserQuestData.swift */; };
-		C8B996E52A465DB80099E1B4 /* QuestTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996E42A465DB80099E1B4 /* QuestTrackerView.swift */; };
-		C8B996E62A465DB80099E1B4 /* QuestTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996E42A465DB80099E1B4 /* QuestTrackerView.swift */; };
-		C8B996E72A465DB80099E1B4 /* QuestTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996E42A465DB80099E1B4 /* QuestTrackerView.swift */; };
 		C8FCEF202A4507BB005797A7 /* QuestappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF1F2A4507BB005797A7 /* QuestappApp.swift */; };
 		C8FCEF222A4507BB005797A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF212A4507BB005797A7 /* ContentView.swift */; };
 		C8FCEF242A4507BD005797A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8FCEF232A4507BD005797A7 /* Assets.xcassets */; };
@@ -53,7 +50,6 @@
 		C85F50A62A454BF20092B8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C8B996DA2A46413F0099E1B4 /* QuestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestData.swift; sourceTree = "<group>"; };
 		C8B996E02A4645300099E1B4 /* UserQuestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuestData.swift; sourceTree = "<group>"; };
-		C8B996E42A465DB80099E1B4 /* QuestTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestTrackerView.swift; sourceTree = "<group>"; };
 		C8FCEF1C2A4507BB005797A7 /* Questapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Questapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FCEF1F2A4507BB005797A7 /* QuestappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestappApp.swift; sourceTree = "<group>"; };
 		C8FCEF212A4507BB005797A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,7 +124,6 @@
 				C8B996DA2A46413F0099E1B4 /* QuestData.swift */,
 				C8FCEF252A4507BD005797A7 /* Preview Content */,
 				C8B996E02A4645300099E1B4 /* UserQuestData.swift */,
-				C8B996E42A465DB80099E1B4 /* QuestTrackerView.swift */,
 			);
 			path = Questapp;
 			sourceTree = "<group>";
@@ -301,7 +296,6 @@
 				C8B996DB2A46413F0099E1B4 /* QuestData.swift in Sources */,
 				C8B996E12A4645300099E1B4 /* UserQuestData.swift in Sources */,
 				C8FCEF222A4507BB005797A7 /* ContentView.swift in Sources */,
-				C8B996E52A465DB80099E1B4 /* QuestTrackerView.swift in Sources */,
 				C8FCEF202A4507BB005797A7 /* QuestappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +304,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8B996E62A465DB80099E1B4 /* QuestTrackerView.swift in Sources */,
 				C8FCEF512A4509A7005797A7 /* QuestappApp.swift in Sources */,
 				C8FCEF312A4507BD005797A7 /* QuestappTests.swift in Sources */,
 				C8B996DE2A4642520099E1B4 /* QuestData.swift in Sources */,
@@ -325,7 +318,6 @@
 			files = (
 				C8B996DF2A4642530099E1B4 /* QuestData.swift in Sources */,
 				C8FCEF3D2A4507BD005797A7 /* QuestappUITestsLaunchTests.swift in Sources */,
-				C8B996E72A465DB80099E1B4 /* QuestTrackerView.swift in Sources */,
 				C8FCEF3B2A4507BD005797A7 /* QuestappUITests.swift in Sources */,
 				C8B996E32A4645300099E1B4 /* UserQuestData.swift in Sources */,
 				C8B996DD2A4642490099E1B4 /* ContentView.swift in Sources */,
