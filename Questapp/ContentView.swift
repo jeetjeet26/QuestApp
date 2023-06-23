@@ -173,7 +173,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         let radius: CLLocationDistance = 50
 
         let gyms = [
-            CLLocation(latitude: 33.72847700460783, longitude: -117.75727375022889),  // Home
+            CLLocation(latitude: 33.72847700460783, longitude: -117.75727375022889),  // My House
             CLLocation(latitude: 33.72275813611548, longitude: -117.78728824766371),  // 24HR at MarketPlace
             CLLocation(latitude: 33.697878702464834, longitude: -117.74058280321236)  // LAF at Woodbury
             // Add more gym locations as needed
