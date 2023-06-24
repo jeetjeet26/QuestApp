@@ -5,7 +5,6 @@
 //  Created by Jasjit Gill on 6/23/23.
 //
 import Foundation
-
 class UserQuestData: ObservableObject {
     @Published var completedQuests: Int = 0 {
         didSet {

@@ -13,82 +13,85 @@ struct ContentView: View {
     @State private var isNearGym = false
     @State private var questStarted = false
     @StateObject private var timer = CustomTimer()
-    @State private var completedQuests: Int = 0 // Provide an initial value here
 
-    @AppStorage("completedQuests") private var storedCompletedQuests = 0
-    
-    init() {
-        _completedQuests = State(initialValue: storedCompletedQuests)
-    }
-    
-    @State private var locationAuthorizationStatus: CLAuthorizationStatus = .notDetermined
+    @EnvironmentObject private var userQuestData: UserQuestData // Provide UserQuestData as an environment object
+    @EnvironmentObject private var rewardUserQuestData: UserQuestData // Provide RewardUserQuestData as an environment object
 
     var body: some View {
-        VStack {
-            MapView(userLocation: locationManager.lastKnownLocation)
-                .edgesIgnoringSafeArea(.top)
-                .frame(height: questStarted ? 200 : 300)
+        NavigationView {
+            VStack {
+                MapView(userLocation: locationManager.lastKnownLocation)
+                    .edgesIgnoringSafeArea(.top)
+                    .frame(height: questStarted ? 200 : 300)
 
-            if questStarted {
-                Text(timer.elapsedTimeString)
-                    .font(.title)
-                    .padding()
+                if questStarted {
+                    Text(timer.elapsedTimeString)
+                        .font(.title)
+                        .padding()
 
-                if timer.elapsedTime >= 20 {
-                    Button(action: {
-                        finishQuest()
-                    }) {
-                        Text("Finish Quest")
+                    if timer.elapsedTime >= 20 {
+                        Button(action: {
+                            finishQuest()
+                        }) {
+                            Text("Finish Quest")
+                                .font(.title)
+                                .padding()
+                                .background(Color.green)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
+                        .padding()
+                    } else {
+                        Text("Quest in Progress")
                             .font(.title)
                             .padding()
-                            .background(Color.green)
+                    }
+                } else {
+                    Button(action: {
+                        startQuest()
+                    }) {
+                        Text("Start Quest")
+                            .font(.title)
+                            .padding()
+                            .background(isNearGym && locationManager.locationAuthorizationStatus == .authorizedWhenInUse ? Color.green : Color.gray)
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
                     .padding()
-                } else {
-                    Text("Quest in Progress")
-                        .font(.title)
-                        .padding()
+                    .disabled(!(isNearGym && locationManager.locationAuthorizationStatus == .authorizedWhenInUse))
                 }
-            } else {
-                Button(action: {
-                    startQuest()
-                }) {
-                    Text("Start Quest")
+
+                Spacer()
+
+                NavigationLink(destination: RewardScreen()) {
+                    Text("Reward Screen")
                         .font(.title)
                         .padding()
-                        .background(isNearGym && locationAuthorizationStatus == .authorizedWhenInUse ? Color.green : Color.gray)
+                        .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
                 .padding()
-                .disabled(!(isNearGym && locationAuthorizationStatus == .authorizedWhenInUse))
-            }
+                .environmentObject(rewardUserQuestData) // Provide rewardUserQuestData as an environment object
 
-            Text("Completed Quests: \(completedQuests)")
-                .font(.title)
-                .padding()
-
-            Spacer()
-        }
-        .onAppear {
-            locationManager.startUpdatingLocation()
-            locationAuthorizationStatus = CLLocationManager.authorizationStatus()
-        }
-        .onDisappear {
-            locationManager.stopUpdatingLocation()
-        }
-        .onReceive(locationManager.$isNearGym) { nearGym in
-            isNearGym = nearGym
-        }
-        .onChange(of: locationAuthorizationStatus) { status in
-            // Enable/disable the "Start Quest" button when location authorization status changes
-            if questStarted {
-                return
+                Spacer()
             }
-            if isNearGym && status == .authorizedWhenInUse {
-                startQuest()
+            .onAppear {
+                locationManager.startUpdatingLocation()
+            }
+            .onDisappear {
+                locationManager.stopUpdatingLocation()
+            }
+            .onReceive(locationManager.$isNearGym) { nearGym in
+                isNearGym = nearGym
+            }
+            .onChange(of: locationManager.locationAuthorizationStatus) { status in
+                if questStarted {
+                    return
+                }
+                if isNearGym && status == .authorizedWhenInUse {
+                    startQuest()
+                }
             }
         }
     }
@@ -101,9 +104,8 @@ struct ContentView: View {
     private func finishQuest() {
         timer.stop()
         questStarted = false
-        completedQuests += 1
-        storedCompletedQuests = completedQuests // Store the updated value
         timer.reset()
+        userQuestData.completedQuests += 1
     }
 }
 
@@ -143,10 +145,9 @@ struct MapView: UIViewRepresentable {
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
-
     @Published var lastKnownLocation: CLLocationCoordinate2D?
     @Published var isNearGym = false
-    @State private var locationAuthorizationStatus = CLLocationManager.authorizationStatus()
+    @Published var locationAuthorizationStatus = CLLocationManager.authorizationStatus()
 
     override init() {
         super.init()
@@ -165,26 +166,22 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         lastKnownLocation = location.coordinate
-
         isNearGym = isNearbyGym(location)
     }
 
     private func isNearbyGym(_ location: CLLocation) -> Bool {
         let radius: CLLocationDistance = 50
-
         let gyms = [
             CLLocation(latitude: 33.72847700460783, longitude: -117.75727375022889),  // My House
             CLLocation(latitude: 33.72275813611548, longitude: -117.78728824766371),  // 24HR at MarketPlace
             CLLocation(latitude: 33.697878702464834, longitude: -117.74058280321236)  // LAF at Woodbury
             // Add more gym locations as needed
         ]
-
         for gymLocation in gyms {
             if location.distance(from: gymLocation) < radius {
                 return true
             }
         }
-
         return false
     }
 }
@@ -192,7 +189,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
 class CustomTimer: ObservableObject {
     private var timer: Timer?
     private var startTime: Date?
-
     @Published var elapsedTime: TimeInterval = 0
 
     var elapsedTimeString: String {
