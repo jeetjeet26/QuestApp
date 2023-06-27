@@ -27,7 +27,7 @@ struct QuestappApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainContentView()
                 .environmentObject(userQuestData)
                 .environmentObject(rewardUserQuestData)
                 .environmentObject(viewModel)

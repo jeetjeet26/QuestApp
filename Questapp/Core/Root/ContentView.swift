@@ -11,6 +11,21 @@ import CoreLocation
 import AuthenticationServices
 import FirebaseAnalyticsSwift
 
+struct MainContentView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+    
+    var body: some View {
+        Group {
+            if viewModel.userSession != nil {
+                ContentView()
+            } else {
+                LoginView()
+            }
+        }
+    }
+}
+
+
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager()
     @State private var isNearGym = false
@@ -20,6 +35,8 @@ struct ContentView: View {
     @State private var shouldNavigateToRewardScreen = false // Added state variable for navigation
     @State private var showResetButton = false // Added state variable for reset button
     @State private var appleSignInCredential: ASAuthorizationAppleIDCredential? // Added state variable for Apple Sign-In credential
+    
+    
     var body: some View {
         NavigationView {
             VStack {
