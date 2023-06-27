@@ -4,34 +4,38 @@
 //
 //  Created by Jasjit Gill on 6/22/23.
 //
+
 import SwiftUI
 import MapKit
 import CoreLocation
+import AuthenticationServices
+import FirebaseAnalyticsSwift
 
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager()
     @State private var isNearGym = false
     @State private var questStarted = false
     @StateObject private var timer = CustomTimer()
-
     @EnvironmentObject private var userQuestData: UserQuestData // Provide UserQuestData as an environment object
-    @EnvironmentObject private var rewardUserQuestData: UserQuestData // Provide RewardUserQuestData as an environment object
-
+    @State private var shouldNavigateToRewardScreen = false // Added state variable for navigation
+    @State private var showResetButton = false // Added state variable for reset button
+    @State private var appleSignInCredential: ASAuthorizationAppleIDCredential? // Added state variable for Apple Sign-In credential
     var body: some View {
         NavigationView {
             VStack {
                 MapView(userLocation: locationManager.lastKnownLocation)
                     .edgesIgnoringSafeArea(.top)
                     .frame(height: questStarted ? 200 : 300)
-
+                
                 if questStarted {
                     Text(timer.elapsedTimeString)
                         .font(.title)
                         .padding()
-
-                    if timer.elapsedTime >= 20 {
+                    
+                    if timer.elapsedTime >= 10 {
                         Button(action: {
                             finishQuest()
+                            shouldNavigateToRewardScreen = true // Navigate to the RewardScreen
                         }) {
                             Text("Finish Quest")
                                 .font(.title)
@@ -41,6 +45,8 @@ struct ContentView: View {
                                 .cornerRadius(10)
                         }
                         .padding()
+                        .navigationBarHidden(true) // Hide the navigation bar within the quest view
+                        .navigationBarBackButtonHidden(true) // Hide the back button within the quest view
                     } else {
                         Text("Quest in Progress")
                             .font(.title)
@@ -60,24 +66,33 @@ struct ContentView: View {
                     .padding()
                     .disabled(!(isNearGym && locationManager.locationAuthorizationStatus == .authorizedWhenInUse))
                 }
-
+                
                 Spacer()
-
-                NavigationLink(destination: RewardScreen()) {
-                    Text("Reward Screen")
-                        .font(.title)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                
+                Text("Completed Quests: \(userQuestData.completedQuests)") // Display completed quest count
+                
+                if showResetButton {
+                    Button(action: {
+                        resetCompletedQuests()
+                    }) {
+                        Text("Reset")
+                            .font(.title)
+                            .padding()
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    .padding()
                 }
-                .padding()
-                .environmentObject(rewardUserQuestData) // Provide rewardUserQuestData as an environment object
-
+                
                 Spacer()
+                
+                
             }
+            .navigationBarTitle("Quest") // Set the navigation title for the main quest view
             .onAppear {
                 locationManager.startUpdatingLocation()
+                showResetButton = shouldShowResetButton()
             }
             .onDisappear {
                 locationManager.stopUpdatingLocation()
@@ -93,82 +108,123 @@ struct ContentView: View {
                     startQuest()
                 }
             }
+            .background(
+                NavigationLink(
+                    destination: RewardScreen().environmentObject(userQuestData),
+                    isActive: $shouldNavigateToRewardScreen,
+                    label: EmptyView.init
+                )
+            )
         }
+        .navigationViewStyle(StackNavigationViewStyle()) // Use stack navigation style for better compatibility with hiding the navigation bar
+        .analyticsScreen(name: "\(ContentView.self)")
     }
-
+    
     private func startQuest() {
         questStarted = true
         timer.start()
     }
-
+    
     private func finishQuest() {
         timer.stop()
         questStarted = false
         timer.reset()
         userQuestData.completedQuests += 1
+        showResetButton = shouldShowResetButton()
+    }
+    
+    private func shouldShowResetButton() -> Bool {
+        return userQuestData.completedQuests > 0
+    }
+    
+    private func resetCompletedQuests() {
+        userQuestData.completedQuests = 0
+        showResetButton = false
+    }
+    
+    private func handleAppleSignInCompletion(result: Result<ASAuthorization, Error>) {
+        switch result {
+        case .success(let authorization):
+            if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+                // Store the credential for further use (e.g., linking to user account)
+                self.appleSignInCredential = appleIDCredential
+                // Handle the user authentication or registration process
+                handleUserAuthentication(appleIDCredential: appleIDCredential)
+            }
+        case .failure(let error):
+            // Handle the error
+            print("Apple Sign-In failed with error: \(error.localizedDescription)")
+        }
+    }
+    
+    private func handleUserAuthentication(appleIDCredential: ASAuthorizationAppleIDCredential) {
+        // Use the appleIDCredential to authenticate or register the user
+        // You can access the user's email, full name, and other relevant information from the credential
+        let userEmail = appleIDCredential.email
+        let userFullName = appleIDCredential.fullName
+        // ...
+        // Implement your logic to handle the authentication or registration process
     }
 }
-
 struct MapView: UIViewRepresentable {
     var userLocation: CLLocationCoordinate2D?
-
+    
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.showsUserLocation = true
         mapView.delegate = context.coordinator
         return mapView
     }
-
+    
     func updateUIView(_ uiView: MKMapView, context: Context) {
         if let location = userLocation {
             let region = MKCoordinateRegion(center: location, latitudinalMeters: 1000, longitudinalMeters: 1000)
             uiView.setRegion(region, animated: true)
         }
     }
-
+    
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-
+    
     class Coordinator: NSObject, MKMapViewDelegate {
         var parent: MapView
-
+        
         init(_ parent: MapView) {
             self.parent = parent
         }
-
+        
         func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
             parent.userLocation = userLocation.coordinate
         }
     }
 }
-
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     @Published var lastKnownLocation: CLLocationCoordinate2D?
     @Published var isNearGym = false
     @Published var locationAuthorizationStatus = CLLocationManager.authorizationStatus()
-
+    
     override init() {
         super.init()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
     }
-
+    
     func startUpdatingLocation() {
         locationManager.startUpdatingLocation()
     }
-
+    
     func stopUpdatingLocation() {
         locationManager.stopUpdatingLocation()
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         lastKnownLocation = location.coordinate
         isNearGym = isNearbyGym(location)
     }
-
+    
     private func isNearbyGym(_ location: CLLocation) -> Bool {
         let radius: CLLocationDistance = 50
         let gyms = [
@@ -185,38 +241,43 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         return false
     }
 }
-
 class CustomTimer: ObservableObject {
     private var timer: Timer?
     private var startTime: Date?
     @Published var elapsedTime: TimeInterval = 0
-
+    
     var elapsedTimeString: String {
         let minutes = Int(elapsedTime / 60)
         let seconds = Int(elapsedTime) % 60
         return String(format: "%02d:%02d", minutes, seconds)
     }
-
+    
     func start() {
         startTime = Date()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.updateElapsedTime()
         }
     }
-
+    
     func stop() {
         timer?.invalidate()
         timer = nil
         startTime = nil
     }
-
+    
     func reset() {
         elapsedTime = 0
     }
-
+    
     private func updateElapsedTime() {
         if let startTime = startTime {
             elapsedTime = -startTime.timeIntervalSinceNow
         }
+    }
+}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(UserQuestData())
     }
 }

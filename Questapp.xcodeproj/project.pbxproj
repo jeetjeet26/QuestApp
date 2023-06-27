@@ -18,6 +18,15 @@
 		C8B996E92A4683390099E1B4 /* RewardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996E82A4683390099E1B4 /* RewardScreen.swift */; };
 		C8B996EA2A4683390099E1B4 /* RewardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996E82A4683390099E1B4 /* RewardScreen.swift */; };
 		C8B996EB2A4683390099E1B4 /* RewardScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996E82A4683390099E1B4 /* RewardScreen.swift */; };
+		C8B997602A4A11B30099E1B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8B9975F2A4A11B30099E1B4 /* GoogleService-Info.plist */; };
+		C8B997612A4A11B30099E1B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8B9975F2A4A11B30099E1B4 /* GoogleService-Info.plist */; };
+		C8B997622A4A11B30099E1B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8B9975F2A4A11B30099E1B4 /* GoogleService-Info.plist */; };
+		C8B997652A4A122B0099E1B4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C8B997642A4A122B0099E1B4 /* FirebaseAnalytics */; };
+		C8B997672A4A122B0099E1B4 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C8B997662A4A122B0099E1B4 /* FirebaseAnalyticsSwift */; };
+		C8B997692A4A3A360099E1B4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C8B997682A4A3A360099E1B4 /* FirebaseAuth */; };
+		C8B9976F2A4A47B30099E1B4 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9976E2A4A47B30099E1B4 /* WelcomeView.swift */; };
+		C8B997702A4A47B30099E1B4 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9976E2A4A47B30099E1B4 /* WelcomeView.swift */; };
+		C8B997712A4A47B30099E1B4 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9976E2A4A47B30099E1B4 /* WelcomeView.swift */; };
 		C8FCEF202A4507BB005797A7 /* QuestappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF1F2A4507BB005797A7 /* QuestappApp.swift */; };
 		C8FCEF222A4507BB005797A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF212A4507BB005797A7 /* ContentView.swift */; };
 		C8FCEF242A4507BD005797A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8FCEF232A4507BD005797A7 /* Assets.xcassets */; };
@@ -54,6 +63,9 @@
 		C8B996DA2A46413F0099E1B4 /* QuestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestData.swift; sourceTree = "<group>"; };
 		C8B996E02A4645300099E1B4 /* UserQuestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuestData.swift; sourceTree = "<group>"; };
 		C8B996E82A4683390099E1B4 /* RewardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardScreen.swift; sourceTree = "<group>"; };
+		C8B996EC2A476A800099E1B4 /* Questapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Questapp.entitlements; sourceTree = "<group>"; };
+		C8B9975F2A4A11B30099E1B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C8B9976E2A4A47B30099E1B4 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		C8FCEF1C2A4507BB005797A7 /* Questapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Questapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8FCEF1F2A4507BB005797A7 /* QuestappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestappApp.swift; sourceTree = "<group>"; };
 		C8FCEF212A4507BB005797A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,8 +87,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8FCEF4D2A4508FA005797A7 /* CoreLocation.framework in Frameworks */,
+				C8B997692A4A3A360099E1B4 /* FirebaseAuth in Frameworks */,
 				C8FCEF4F2A45090C005797A7 /* SwiftUI.framework in Frameworks */,
+				C8B997652A4A122B0099E1B4 /* FirebaseAnalytics in Frameworks */,
 				C8FCEF4B2A4508F2005797A7 /* MapKit.framework in Frameworks */,
+				C8B997672A4A122B0099E1B4 /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				C8FCEF1E2A4507BB005797A7 /* Questapp */,
-				C8FCEF2F2A4507BD005797A7 /* QuestappTests */,
 				C8FCEF392A4507BD005797A7 /* QuestappUITests */,
 				C8FCEF1D2A4507BB005797A7 /* Products */,
 				C8FCEF492A4508F1005797A7 /* Frameworks */,
@@ -121,12 +135,16 @@
 		C8FCEF1E2A4507BB005797A7 /* Questapp */ = {
 			isa = PBXGroup;
 			children = (
+				C8B996EC2A476A800099E1B4 /* Questapp.entitlements */,
 				C85F50A62A454BF20092B8BE /* Info.plist */,
 				C8FCEF1F2A4507BB005797A7 /* QuestappApp.swift */,
 				C8FCEF212A4507BB005797A7 /* ContentView.swift */,
 				C8FCEF232A4507BD005797A7 /* Assets.xcassets */,
+				C8B9976E2A4A47B30099E1B4 /* WelcomeView.swift */,
+				C8B9975F2A4A11B30099E1B4 /* GoogleService-Info.plist */,
 				C8B996DA2A46413F0099E1B4 /* QuestData.swift */,
 				C8B996E82A4683390099E1B4 /* RewardScreen.swift */,
+				C8FCEF2F2A4507BD005797A7 /* QuestappTests */,
 				C8FCEF252A4507BD005797A7 /* Preview Content */,
 				C8B996E02A4645300099E1B4 /* UserQuestData.swift */,
 			);
@@ -178,12 +196,18 @@
 				C8FCEF182A4507BB005797A7 /* Sources */,
 				C8FCEF192A4507BB005797A7 /* Frameworks */,
 				C8FCEF1A2A4507BB005797A7 /* Resources */,
+				C8B996F12A47827C0099E1B4 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Questapp;
+			packageProductDependencies = (
+				C8B997642A4A122B0099E1B4 /* FirebaseAnalytics */,
+				C8B997662A4A122B0099E1B4 /* FirebaseAnalyticsSwift */,
+				C8B997682A4A3A360099E1B4 /* FirebaseAuth */,
+			);
 			productName = Questapp;
 			productReference = C8FCEF1C2A4507BB005797A7 /* Questapp.app */;
 			productType = "com.apple.product-type.application";
@@ -256,6 +280,9 @@
 				Base,
 			);
 			mainGroup = C8FCEF132A4507BB005797A7;
+			packageReferences = (
+				C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = C8FCEF1D2A4507BB005797A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,6 +301,7 @@
 			files = (
 				C8FCEF272A4507BD005797A7 /* Preview Assets.xcassets in Resources */,
 				C8FCEF242A4507BD005797A7 /* Assets.xcassets in Resources */,
+				C8B997602A4A11B30099E1B4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B997612A4A11B30099E1B4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,10 +317,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B997622A4A11B30099E1B4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C8B996F12A47827C0099E1B4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/sudo /usr/sbin/chown -R $(whoami):staff \"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/AuthenticationServices.framework\"\n Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C8FCEF182A4507BB005797A7 /* Sources */ = {
@@ -299,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8B996DB2A46413F0099E1B4 /* QuestData.swift in Sources */,
+				C8B9976F2A4A47B30099E1B4 /* WelcomeView.swift in Sources */,
 				C8B996E92A4683390099E1B4 /* RewardScreen.swift in Sources */,
 				C8B996E12A4645300099E1B4 /* UserQuestData.swift in Sources */,
 				C8FCEF222A4507BB005797A7 /* ContentView.swift in Sources */,
@@ -316,6 +367,7 @@
 				C8B996DE2A4642520099E1B4 /* QuestData.swift in Sources */,
 				C8B996E22A4645300099E1B4 /* UserQuestData.swift in Sources */,
 				C8B996DC2A4642490099E1B4 /* ContentView.swift in Sources */,
+				C8B997702A4A47B30099E1B4 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +378,7 @@
 				C8B996DF2A4642530099E1B4 /* QuestData.swift in Sources */,
 				C8B996EB2A4683390099E1B4 /* RewardScreen.swift in Sources */,
 				C8FCEF3D2A4507BD005797A7 /* QuestappUITestsLaunchTests.swift in Sources */,
+				C8B997712A4A47B30099E1B4 /* WelcomeView.swift in Sources */,
 				C8FCEF3B2A4507BD005797A7 /* QuestappUITests.swift in Sources */,
 				C8B996E32A4645300099E1B4 /* UserQuestData.swift in Sources */,
 				C8B996DD2A4642490099E1B4 /* ContentView.swift in Sources */,
@@ -468,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Questapp/Questapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Questapp/Preview Content\"";
@@ -486,7 +540,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qst.Questapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qst.questapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -499,6 +553,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Questapp/Questapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Questapp/Preview Content\"";
@@ -517,7 +572,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = qst.Questapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qst.questapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -637,6 +692,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C8B997642A4A122B0099E1B4 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		C8B997662A4A122B0099E1B4 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		C8B997682A4A3A360099E1B4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C8FCEF142A4507BB005797A7 /* Project object */;
 }
