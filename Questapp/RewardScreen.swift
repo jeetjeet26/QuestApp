@@ -6,7 +6,7 @@
 //
 import SwiftUI
 struct RewardScreen: View {
-    @EnvironmentObject private var userQuestData: UserQuestData // Use UserQuestData instead of RewardUserQuestData
+    @EnvironmentObject private var userQuestData: UserQuestData // Use UserQuestDater instead of RewardUserQuestData
     var body: some View {
         VStack {
             Spacer()
