@@ -19,14 +19,10 @@ struct WelcomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Welcome to QuestApp!")
+                Text("Get paid to build good habits!")
                     .font(.title)
                     .padding()
-                
-                Text("Get ready to embark on exciting quests and explore the world around you.")
-                    .multilineTextAlignment(.center)
-                    .padding()
-                
+              
                 TextField("Email", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
