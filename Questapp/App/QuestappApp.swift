@@ -6,6 +6,7 @@
 //
 import SwiftUI
 import FirebaseCore
+import Firebase
 import Foundation
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -22,12 +23,14 @@ struct QuestappApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject private var userQuestData = UserQuestData()
     @StateObject private var rewardUserQuestData = UserQuestData()
+    @StateObject var viewModel = AuthViewModel()
     
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+            ContentView()
                 .environmentObject(userQuestData)
                 .environmentObject(rewardUserQuestData)
+                .environmentObject(viewModel)
         }
     }
 }
