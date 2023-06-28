@@ -19,6 +19,7 @@ struct InputView: View {
                 .foregroundColor(Color(.darkGray))
                 .fontWeight(.semibold)
                 .font(.footnote)
+            
             if isSecureField {
                 SecureField(placeholder, text: $text)
                     .font(.system(size: 14))

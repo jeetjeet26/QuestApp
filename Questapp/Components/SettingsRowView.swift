@@ -17,11 +17,11 @@ struct SettingsRowView: View {
             Image(systemName: imageName)
                 .imageScale(.small)
                 .font(.title)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
             
             Text(title)
                 .font(.subheadline)
-                .foregroundColor(.black)
+                .foregroundColor(.white)
         }
     }
 }

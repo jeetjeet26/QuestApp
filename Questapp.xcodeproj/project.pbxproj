@@ -16,6 +16,8 @@
 		C80FEBA02A4B7F280077521B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C80FEB9F2A4B7F280077521B /* FirebaseFirestore */; };
 		C80FEBA22A4B7F340077521B /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C80FEBA12A4B7F340077521B /* FirebaseFirestoreSwift */; };
 		C80FEBA82A4B7FEB0077521B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FEBA72A4B7FEB0077521B /* AuthViewModel.swift */; };
+		C80FEBAB2A4CA7610077521B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FEBAA2A4CA7610077521B /* RootView.swift */; };
+		C80FEBAD2A4CB5AC0077521B /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C80FEBAC2A4CB5AC0077521B /* FirebaseDatabaseSwift */; };
 		C8B996DB2A46413F0099E1B4 /* QuestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996DA2A46413F0099E1B4 /* QuestData.swift */; };
 		C8B996DC2A4642490099E1B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF212A4507BB005797A7 /* ContentView.swift */; };
 		C8B996DD2A4642490099E1B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF212A4507BB005797A7 /* ContentView.swift */; };
@@ -75,6 +77,7 @@
 		C80FEB9B2A4B549D0077521B /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		C80FEB9D2A4B571B0077521B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C80FEBA72A4B7FEB0077521B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		C80FEBAA2A4CA7610077521B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C85F50A62A454BF20092B8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C8B996DA2A46413F0099E1B4 /* QuestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestData.swift; sourceTree = "<group>"; };
 		C8B996E02A4645300099E1B4 /* UserQuestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuestData.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 				C8FCEF4D2A4508FA005797A7 /* CoreLocation.framework in Frameworks */,
 				C8B997692A4A3A360099E1B4 /* FirebaseAuth in Frameworks */,
 				C8FCEF4F2A45090C005797A7 /* SwiftUI.framework in Frameworks */,
+				C80FEBAD2A4CB5AC0077521B /* FirebaseDatabaseSwift in Frameworks */,
 				C8B997652A4A122B0099E1B4 /* FirebaseAnalytics in Frameworks */,
 				C8FCEF4B2A4508F2005797A7 /* MapKit.framework in Frameworks */,
 				C8B997672A4A122B0099E1B4 /* FirebaseAnalyticsSwift in Frameworks */,
@@ -150,6 +154,7 @@
 		C80FEB8D2A4B416E0077521B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C80FEBA92A4CA72C0077521B /* Quests */,
 				C80FEB902A4B41BE0077521B /* Authentication */,
 				C80FEB982A4B522A0077521B /* Profile */,
 				C80FEB8F2A4B41A10077521B /* Rewards */,
@@ -161,7 +166,7 @@
 		C80FEB8E2A4B41820077521B /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				C8FCEF212A4507BB005797A7 /* ContentView.swift */,
+				C80FEBAA2A4CA7610077521B /* RootView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -215,6 +220,14 @@
 				C80FEB962A4B4F740077521B /* RegistrationView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C80FEBA92A4CA72C0077521B /* Quests */ = {
+			isa = PBXGroup;
+			children = (
+				C8FCEF212A4507BB005797A7 /* ContentView.swift */,
+			);
+			path = Quests;
 			sourceTree = "<group>";
 		};
 		C8FCEF132A4507BB005797A7 = {
@@ -314,6 +327,7 @@
 				C8B997682A4A3A360099E1B4 /* FirebaseAuth */,
 				C80FEB9F2A4B7F280077521B /* FirebaseFirestore */,
 				C80FEBA12A4B7F340077521B /* FirebaseFirestoreSwift */,
+				C80FEBAC2A4CB5AC0077521B /* FirebaseDatabaseSwift */,
 			);
 			productName = Questapp;
 			productReference = C8FCEF1C2A4507BB005797A7 /* Questapp.app */;
@@ -459,6 +473,7 @@
 				C80FEB932A4B43AA0077521B /* InputView.swift in Sources */,
 				C80FEB9A2A4B52B20077521B /* ProfileView.swift in Sources */,
 				C8B9976F2A4A47B30099E1B4 /* WelcomeView.swift in Sources */,
+				C80FEBAB2A4CA7610077521B /* RootView.swift in Sources */,
 				C80FEB972A4B4F740077521B /* RegistrationView.swift in Sources */,
 				C8B996E92A4683390099E1B4 /* RewardScreen.swift in Sources */,
 				C8B996E12A4645300099E1B4 /* UserQuestData.swift in Sources */,
@@ -828,6 +843,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		C80FEBAC2A4CB5AC0077521B /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
 		};
 		C8B997642A4A122B0099E1B4 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;

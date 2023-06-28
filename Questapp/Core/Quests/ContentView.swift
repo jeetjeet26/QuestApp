@@ -11,21 +11,6 @@ import CoreLocation
 import AuthenticationServices
 import FirebaseAnalyticsSwift
 
-struct MainContentView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
-    
-    var body: some View {
-        Group {
-            if viewModel.userSession != nil {
-                ContentView()
-            } else {
-                LoginView()
-            }
-        }
-    }
-}
-
-
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager()
     @State private var isNearGym = false
@@ -34,7 +19,9 @@ struct ContentView: View {
     @EnvironmentObject private var userQuestData: UserQuestData // Provide UserQuestData as an environment object
     @State private var shouldNavigateToRewardScreen = false // Added state variable for navigation
     @State private var showResetButton = false // Added state variable for reset button
-    @State private var appleSignInCredential: ASAuthorizationAppleIDCredential? // Added state variable for Apple Sign-In credential
+    @State private var shouldNavigateToProfileView = false
+    @EnvironmentObject var viewModel: AuthViewModel
+
     
     
     var body: some View {
@@ -104,8 +91,19 @@ struct ContentView: View {
                 
                 Spacer()
                 
+                    Button(action: {
+                                   shouldNavigateToProfileView = true
+                               }) {
+                                   Text("Go to Profile")
+                                       .font(.title)
+                                       .padding()
+                                       .background(Color.blue)
+                                       .foregroundColor(.white)
+                                       .cornerRadius(10)
+                               }
                 
             }
+            .padding()
             .navigationBarTitle("Quest") // Set the navigation title for the main quest view
             .onAppear {
                 locationManager.startUpdatingLocation()
@@ -130,6 +128,14 @@ struct ContentView: View {
                     destination: RewardScreen().environmentObject(userQuestData),
                     isActive: $shouldNavigateToRewardScreen,
                     label: EmptyView.init
+                    )
+            .background(
+                NavigationLink(
+                    destination: ProfileView().environmentObject(viewModel),
+                    isActive: $shouldNavigateToProfileView,
+                    label: EmptyView.init
+                    
+                 )
                 )
             )
         }
@@ -159,29 +165,7 @@ struct ContentView: View {
         showResetButton = false
     }
     
-    private func handleAppleSignInCompletion(result: Result<ASAuthorization, Error>) {
-        switch result {
-        case .success(let authorization):
-            if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-                // Store the credential for further use (e.g., linking to user account)
-                self.appleSignInCredential = appleIDCredential
-                // Handle the user authentication or registration process
-                handleUserAuthentication(appleIDCredential: appleIDCredential)
-            }
-        case .failure(let error):
-            // Handle the error
-            print("Apple Sign-In failed with error: \(error.localizedDescription)")
-        }
-    }
     
-    private func handleUserAuthentication(appleIDCredential: ASAuthorizationAppleIDCredential) {
-        // Use the appleIDCredential to authenticate or register the user
-        // You can access the user's email, full name, and other relevant information from the credential
-        let userEmail = appleIDCredential.email
-        let userFullName = appleIDCredential.fullName
-        // ...
-        // Implement your logic to handle the authentication or registration process
-    }
 }
 struct MapView: UIViewRepresentable {
     var userLocation: CLLocationCoordinate2D?

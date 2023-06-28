@@ -6,9 +6,12 @@
 //
 import SwiftUI
 import FirebaseFirestoreSwift
+import Firebase
 import Foundation
+import FirebaseAuth
 
 struct ProfileView: View {
+    
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
@@ -76,5 +79,6 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+            .environmentObject(AuthViewModel())
     }
 }
