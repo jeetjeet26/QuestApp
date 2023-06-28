@@ -225,6 +225,8 @@
 		C80FEBA92A4CA72C0077521B /* Quests */ = {
 			isa = PBXGroup;
 			children = (
+				C8B996DA2A46413F0099E1B4 /* QuestData.swift */,
+				C8B996E02A4645300099E1B4 /* UserQuestData.swift */,
 				C8FCEF212A4507BB005797A7 /* ContentView.swift */,
 			);
 			path = Quests;
@@ -261,8 +263,6 @@
 				C85F50A62A454BF20092B8BE /* Info.plist */,
 				C8FCEF232A4507BD005797A7 /* Assets.xcassets */,
 				C8B9975F2A4A11B30099E1B4 /* GoogleService-Info.plist */,
-				C8B996DA2A46413F0099E1B4 /* QuestData.swift */,
-				C8B996E02A4645300099E1B4 /* UserQuestData.swift */,
 				C8FCEF2F2A4507BD005797A7 /* QuestappTests */,
 				C8FCEF252A4507BD005797A7 /* Preview Content */,
 			);
