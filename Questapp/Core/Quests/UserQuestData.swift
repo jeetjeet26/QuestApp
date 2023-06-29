@@ -7,6 +7,7 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseAuth
+import Firebase
 
 class UserQuestData: ObservableObject {
     @Published var completedQuests: Int = 0 {
@@ -28,22 +29,27 @@ class UserQuestData: ObservableObject {
     }
     
     private func loadData() {
-        guard let userID = Auth.auth().currentUser?.uid else { return }
+        // Check if the Firebase authentication is complete
+        _ = Auth.auth().addStateDidChangeListener { (auth, user) in
+            if let user = user {
+                // Fetch the user data once the user ID is available
+                let docRef = self.db.collection("users").document(user.uid)
 
-        let docRef = db.collection("users").document(userID)
-
-        listener = docRef.addSnapshotListener { documentSnapshot, error in
-            guard let document = documentSnapshot else {
-                print("Error fetching document: \(error!)")
-                return
+                self.listener = docRef.addSnapshotListener { documentSnapshot, error in
+                    guard let document = documentSnapshot else {
+                        print("Error fetching document: \(error!)")
+                        return
+                    }
+                    guard let data = document.data() else {
+                        print("Document data was empty.")
+                        return
+                    }
+                    self.completedQuests = data["completedQuests"] as? Int ?? 0
+                }
             }
-            guard let data = document.data() else {
-                print("Document data was empty.")
-                return
-            }
-            self.completedQuests = data["completedQuests"] as? Int ?? 0
         }
     }
+
     
     private func updateQuestsInFirebase() {
         guard let userID = Auth.auth().currentUser?.uid else { return }

@@ -231,7 +231,9 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         let gyms = [
             CLLocation(latitude: 33.72847700460783, longitude: -117.75727375022889),  // My House
             CLLocation(latitude: 33.72275813611548, longitude: -117.78728824766371),  // 24HR at MarketPlace
-            CLLocation(latitude: 33.697878702464834, longitude: -117.74058280321236)  // LAF at Woodbury
+            CLLocation(latitude: 33.697878702464834, longitude: -117.74058280321236),  // LAF at Woodbury
+            CLLocation(latitude: 33.67879480658799, longitude:  -117.88842979673083)  // GC costa mesa
+
             // Add more gym locations as needed
         ]
         for gymLocation in gyms {
