@@ -37,20 +37,23 @@ struct ContentView: View {
                         .padding()
                     
                     if timer.elapsedTime >= 10 {
-                        Button(action: {
-                            finishQuest()
-                            shouldNavigateToRewardScreen = true // Navigate to the RewardScreen
-                        }) {
-                            Text("Finish Quest")
-                                .font(.title)
-                                .padding()
-                                .background(Color.green)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
-                        }
-                        .padding()
-                        .navigationBarHidden(true) // Hide the navigation bar within the quest view
-                        .navigationBarBackButtonHidden(true) // Hide the back button within the quest view
+                                            Button(action: {
+                                                if isNearGym {
+                                                    finishQuest()
+                                                    shouldNavigateToRewardScreen = true // Navigate to the RewardScreen
+                                                }
+                                            }) {
+                                                Text("Finish Quest")
+                                                    .font(.title)
+                                                    .padding()
+                                                    .background(isNearGym ? Color.green : Color.gray) // Changes button color based on gym proximity
+                                                    .foregroundColor(.white)
+                                                    .cornerRadius(10)
+                                            }
+                                            .padding()
+                                            .disabled(!isNearGym) // Disables the button when not near a gym
+                                            .navigationBarHidden(true) // Hide the navigation bar within the quest view
+                                            .navigationBarBackButtonHidden(true)
                     } else {
                         Text("Quest in Progress")
                             .font(.title)
@@ -149,11 +152,16 @@ struct ContentView: View {
     }
     
     private func finishQuest() {
-        timer.stop()
-        questStarted = false
-        timer.reset()
-        userQuestData.completedQuests += 1
-        showResetButton = shouldShowResetButton()
+        if locationManager.isNearGym {
+            timer.stop()
+            questStarted = false
+            timer.reset()
+            userQuestData.completedQuests += 1
+            showResetButton = shouldShowResetButton()
+        } else {
+            // You can show a message to the user indicating they need to be near a gym to finish the quest
+            print("You need to be near a gym to finish your quest.")
+        }
     }
     
     private func shouldShowResetButton() -> Bool {
@@ -232,7 +240,9 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             CLLocation(latitude: 33.72847700460783, longitude: -117.75727375022889),  // My House
             CLLocation(latitude: 33.72275813611548, longitude: -117.78728824766371),  // 24HR at MarketPlace
             CLLocation(latitude: 33.697878702464834, longitude: -117.74058280321236),  // LAF at Woodbury
-            CLLocation(latitude: 33.67879480658799, longitude:  -117.88842979673083)  // GC costa mesa
+            CLLocation(latitude: 32.74888110809706, longitude:  -117.16374188038891),  // Arjun gym Prime fitness SD
+            CLLocation(latitude: 33.68351317827565, longitude:  -117.81074960484224)  // Barranca LAF
+
 
             // Add more gym locations as needed
         ]

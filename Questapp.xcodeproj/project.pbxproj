@@ -403,6 +403,7 @@
 			mainGroup = C8FCEF132A4507BB005797A7;
 			packageReferences = (
 				C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C80FEBAE2A4DFB330077521B /* XCRemoteSwiftPackageReference "plaid-link-ios" */,
 			);
 			productRefGroup = C8FCEF1D2A4507BB005797A7 /* Products */;
 			projectDirPath = "";
@@ -823,6 +824,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C80FEBAE2A4DFB330077521B /* XCRemoteSwiftPackageReference "plaid-link-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/plaid/plaid-link-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";

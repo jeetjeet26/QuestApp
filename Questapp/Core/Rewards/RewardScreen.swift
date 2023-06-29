@@ -12,7 +12,7 @@ struct RewardScreen: View {
             Spacer()
             // Add any additional content here
         }
-        .navigationBarTitle(Text("Reward"), displayMode: .inline)
+        .navigationBarTitle(Text("Loot"), displayMode: .inline)
         .padding()
     }
 }
