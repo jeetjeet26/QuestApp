@@ -91,15 +91,6 @@
       }
     },
     {
-      "identity" : "plaid-link-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/plaid/plaid-link-ios",
-      "state" : {
-        "revision" : "d593195bb9e972b8b732bcb39469d0688d798017",
-        "version" : "4.4.0"
-      }
-    },
-    {
       "identity" : "promises",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/promises.git",

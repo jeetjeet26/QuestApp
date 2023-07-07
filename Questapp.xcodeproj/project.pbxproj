@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BCF2117F6FADFD517F26A42 /* Pods_Questapp_QuestappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3467CD9CD71CC7F993CC82B8 /* Pods_Questapp_QuestappUITests.framework */; };
+		46F95800B93AB19D1ECF66CB /* Pods_Questapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB99B7159592C2A9BA48CCD /* Pods_Questapp.framework */; };
+		95B6C4BF90EA6C40F4E90B65 /* Pods_QuestappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C07E38494762FB3DFFD060E /* Pods_QuestappTests.framework */; };
 		C80FEB932A4B43AA0077521B /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FEB922A4B43AA0077521B /* InputView.swift */; };
 		C80FEB952A4B46570077521B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FEB942A4B46570077521B /* LoginView.swift */; };
 		C80FEB972A4B4F740077521B /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FEB962A4B4F740077521B /* RegistrationView.swift */; };
@@ -18,6 +21,7 @@
 		C80FEBA82A4B7FEB0077521B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FEBA72A4B7FEB0077521B /* AuthViewModel.swift */; };
 		C80FEBAB2A4CA7610077521B /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FEBAA2A4CA7610077521B /* RootView.swift */; };
 		C80FEBAD2A4CB5AC0077521B /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C80FEBAC2A4CB5AC0077521B /* FirebaseDatabaseSwift */; };
+		C87BACCA2A58A93E0047C48B /* PlaidLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87BACC92A58A93E0047C48B /* PlaidLink.swift */; };
 		C8B996DB2A46413F0099E1B4 /* QuestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B996DA2A46413F0099E1B4 /* QuestData.swift */; };
 		C8B996DC2A4642490099E1B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF212A4507BB005797A7 /* ContentView.swift */; };
 		C8B996DD2A4642490099E1B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FCEF212A4507BB005797A7 /* ContentView.swift */; };
@@ -70,6 +74,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04CBE5CD382FC40CEB6642B0 /* Pods-Questapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Questapp.debug.xcconfig"; path = "Target Support Files/Pods-Questapp/Pods-Questapp.debug.xcconfig"; sourceTree = "<group>"; };
+		261278469F1559CCD82721D1 /* Pods-Questapp-QuestappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Questapp-QuestappUITests.release.xcconfig"; path = "Target Support Files/Pods-Questapp-QuestappUITests/Pods-Questapp-QuestappUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2C07E38494762FB3DFFD060E /* Pods_QuestappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3467CD9CD71CC7F993CC82B8 /* Pods_Questapp_QuestappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Questapp_QuestappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4807C9FB1077BD1E0371436C /* Pods-QuestappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestappTests.debug.xcconfig"; path = "Target Support Files/Pods-QuestappTests/Pods-QuestappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4DA1F4E79F8A3C3BF72DF00E /* Pods-Questapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Questapp.release.xcconfig"; path = "Target Support Files/Pods-Questapp/Pods-Questapp.release.xcconfig"; sourceTree = "<group>"; };
+		8AB99B7159592C2A9BA48CCD /* Pods_Questapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Questapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C80FEB922A4B43AA0077521B /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		C80FEB942A4B46570077521B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C80FEB962A4B4F740077521B /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
@@ -79,6 +90,7 @@
 		C80FEBA72A4B7FEB0077521B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		C80FEBAA2A4CA7610077521B /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		C85F50A62A454BF20092B8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C87BACC92A58A93E0047C48B /* PlaidLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidLink.swift; sourceTree = "<group>"; };
 		C8B996DA2A46413F0099E1B4 /* QuestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestData.swift; sourceTree = "<group>"; };
 		C8B996E02A4645300099E1B4 /* UserQuestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuestData.swift; sourceTree = "<group>"; };
 		C8B996E82A4683390099E1B4 /* RewardScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardScreen.swift; sourceTree = "<group>"; };
@@ -98,6 +110,8 @@
 		C8FCEF4A2A4508F2005797A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C8FCEF4C2A4508FA005797A7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C8FCEF4E2A45090C005797A7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CAA06A8D18CAD6B0E30E3864 /* Pods-Questapp-QuestappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Questapp-QuestappUITests.debug.xcconfig"; path = "Target Support Files/Pods-Questapp-QuestappUITests/Pods-Questapp-QuestappUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D391D00D40DB43E6906AED35 /* Pods-QuestappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestappTests.release.xcconfig"; path = "Target Support Files/Pods-QuestappTests/Pods-QuestappTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +128,7 @@
 				C8B997672A4A122B0099E1B4 /* FirebaseAnalyticsSwift in Frameworks */,
 				C80FEBA02A4B7F280077521B /* FirebaseFirestore in Frameworks */,
 				C80FEBA22A4B7F340077521B /* FirebaseFirestoreSwift in Frameworks */,
+				46F95800B93AB19D1ECF66CB /* Pods_Questapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B6C4BF90EA6C40F4E90B65 /* Pods_QuestappTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,12 +144,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCF2117F6FADFD517F26A42 /* Pods_Questapp_QuestappUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F9417F647DD546075F8502C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04CBE5CD382FC40CEB6642B0 /* Pods-Questapp.debug.xcconfig */,
+				4DA1F4E79F8A3C3BF72DF00E /* Pods-Questapp.release.xcconfig */,
+				CAA06A8D18CAD6B0E30E3864 /* Pods-Questapp-QuestappUITests.debug.xcconfig */,
+				261278469F1559CCD82721D1 /* Pods-Questapp-QuestappUITests.release.xcconfig */,
+				4807C9FB1077BD1E0371436C /* Pods-QuestappTests.debug.xcconfig */,
+				D391D00D40DB43E6906AED35 /* Pods-QuestappTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C80FEB8B2A4B413B0077521B /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +184,7 @@
 		C80FEB8D2A4B416E0077521B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C834D2AA2A5726B7008259F2 /* Plaid */,
 				C80FEBA92A4CA72C0077521B /* Quests */,
 				C80FEB902A4B41BE0077521B /* Authentication */,
 				C80FEB982A4B522A0077521B /* Profile */,
@@ -232,6 +263,14 @@
 			path = Quests;
 			sourceTree = "<group>";
 		};
+		C834D2AA2A5726B7008259F2 /* Plaid */ = {
+			isa = PBXGroup;
+			children = (
+				C87BACC92A58A93E0047C48B /* PlaidLink.swift */,
+			);
+			path = Plaid;
+			sourceTree = "<group>";
+		};
 		C8FCEF132A4507BB005797A7 = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +278,7 @@
 				C8FCEF392A4507BD005797A7 /* QuestappUITests */,
 				C8FCEF1D2A4507BB005797A7 /* Products */,
 				C8FCEF492A4508F1005797A7 /* Frameworks */,
+				9F9417F647DD546075F8502C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -300,6 +340,9 @@
 				C8FCEF4E2A45090C005797A7 /* SwiftUI.framework */,
 				C8FCEF4C2A4508FA005797A7 /* CoreLocation.framework */,
 				C8FCEF4A2A4508F2005797A7 /* MapKit.framework */,
+				8AB99B7159592C2A9BA48CCD /* Pods_Questapp.framework */,
+				3467CD9CD71CC7F993CC82B8 /* Pods_Questapp_QuestappUITests.framework */,
+				2C07E38494762FB3DFFD060E /* Pods_QuestappTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -311,10 +354,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8FCEF402A4507BD005797A7 /* Build configuration list for PBXNativeTarget "Questapp" */;
 			buildPhases = (
+				791F5B83A122CCE170715860 /* [CP] Check Pods Manifest.lock */,
 				C8FCEF182A4507BB005797A7 /* Sources */,
 				C8FCEF192A4507BB005797A7 /* Frameworks */,
 				C8FCEF1A2A4507BB005797A7 /* Resources */,
 				C8B996F12A47827C0099E1B4 /* ShellScript */,
+				A85B807467F662AD298EF877 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,6 +382,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8FCEF432A4507BD005797A7 /* Build configuration list for PBXNativeTarget "QuestappTests" */;
 			buildPhases = (
+				3BFDB0E20A155F1DDBE7676F /* [CP] Check Pods Manifest.lock */,
 				C8FCEF282A4507BD005797A7 /* Sources */,
 				C8FCEF292A4507BD005797A7 /* Frameworks */,
 				C8FCEF2A2A4507BD005797A7 /* Resources */,
@@ -355,9 +401,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8FCEF462A4507BD005797A7 /* Build configuration list for PBXNativeTarget "QuestappUITests" */;
 			buildPhases = (
+				9DA890B15EE90F641EA83DBE /* [CP] Check Pods Manifest.lock */,
 				C8FCEF322A4507BD005797A7 /* Sources */,
 				C8FCEF332A4507BD005797A7 /* Frameworks */,
 				C8FCEF342A4507BD005797A7 /* Resources */,
+				A84FD366B543EA34B95447F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -403,7 +451,6 @@
 			mainGroup = C8FCEF132A4507BB005797A7;
 			packageReferences = (
 				C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				C80FEBAE2A4DFB330077521B /* XCRemoteSwiftPackageReference "plaid-link-ios" */,
 			);
 			productRefGroup = C8FCEF1D2A4507BB005797A7 /* Products */;
 			projectDirPath = "";
@@ -446,6 +493,106 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3BFDB0E20A155F1DDBE7676F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuestappTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		791F5B83A122CCE170715860 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Questapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DA890B15EE90F641EA83DBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Questapp-QuestappUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A84FD366B543EA34B95447F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Questapp-QuestappUITests/Pods-Questapp-QuestappUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Questapp-QuestappUITests/Pods-Questapp-QuestappUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Questapp-QuestappUITests/Pods-Questapp-QuestappUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A85B807467F662AD298EF877 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Questapp/Pods-Questapp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Questapp/Pods-Questapp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Questapp/Pods-Questapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C8B996F12A47827C0099E1B4 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,6 +618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8B996DB2A46413F0099E1B4 /* QuestData.swift in Sources */,
+				C87BACCA2A58A93E0047C48B /* PlaidLink.swift in Sources */,
 				C80FEB932A4B43AA0077521B /* InputView.swift in Sources */,
 				C80FEB9A2A4B52B20077521B /* ProfileView.swift in Sources */,
 				C8B9976F2A4A47B30099E1B4 /* WelcomeView.swift in Sources */,
@@ -648,6 +796,7 @@
 		};
 		C8FCEF412A4507BD005797A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04CBE5CD382FC40CEB6642B0 /* Pods-Questapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -660,8 +809,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Questapp/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Questapp checks your location data to determine if you are nearby a local gym.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Questapp checks your location data to determine if you are nearby a local gym.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
@@ -682,6 +832,7 @@
 		};
 		C8FCEF422A4507BD005797A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DA1F4E79F8A3C3BF72DF00E /* Pods-Questapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -694,8 +845,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Questapp/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Questapp checks your location data to determine if you are nearby a local gym.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Questapp checks your location data to determine if you are nearby a local gym.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
@@ -716,6 +868,7 @@
 		};
 		C8FCEF442A4507BD005797A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4807C9FB1077BD1E0371436C /* Pods-QuestappTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -735,6 +888,7 @@
 		};
 		C8FCEF452A4507BD005797A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D391D00D40DB43E6906AED35 /* Pods-QuestappTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -754,6 +908,7 @@
 		};
 		C8FCEF472A4507BD005797A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAA06A8D18CAD6B0E30E3864 /* Pods-Questapp-QuestappUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -771,6 +926,7 @@
 		};
 		C8FCEF482A4507BD005797A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 261278469F1559CCD82721D1 /* Pods-Questapp-QuestappUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -828,14 +984,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C80FEBAE2A4DFB330077521B /* XCRemoteSwiftPackageReference "plaid-link-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/plaid/plaid-link-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
 		C8B997632A4A122B0099E1B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
